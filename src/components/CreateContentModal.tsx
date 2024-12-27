@@ -1,6 +1,7 @@
 import {useState} from "react"
 import { CrossIcon } from "../icons/CrossIcon"
 import { Button } from "./Button"
+import { Input } from "./Input"
 
 export function CreateContentModal({open, onClose}){    
     return <div>
@@ -13,8 +14,8 @@ export function CreateContentModal({open, onClose}){
                         </div>
                     </div>
                     <div>
-                        <Input placeholder = {"Title"}/>
-                        <Input placeholder = {"link"}/>
+                        <Input placeholder = {"Title"} />
+                        <Input placeholder = {"link"} />
                     </div>
                     <div className="flex justify-center">
                     <Button variant="primary" text="Submit"/>
@@ -25,8 +26,3 @@ export function CreateContentModal({open, onClose}){
     </div>
 }
 
-function Input({onChange, placeholder}: {onChange: () => void}){
-    return <div>
-        <input type="text" placeholder={placeholder} className="px-4 py-2 border rounded m-2" onChange={onChange}/>
-    </div>
-}
